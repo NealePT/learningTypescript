@@ -1,3 +1,2 @@
 console.log("hello world");
-
-let age: number = 20;
+var age = 20;
