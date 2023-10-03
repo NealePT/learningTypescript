@@ -37,3 +37,19 @@
 // calculateTax(10_000, 2022)
 
 // Objects
+// let employee = {id: 1};
+// employee.name = 'Neale'; // valid in js, not in ts because it assumes everything in the object will be a number
+// You can make a value read only if you don't want it to change later
+// let employee: {
+//   readonly id: number,
+//   name: string,
+//   retire: (date: Date) => void
+// } = { 
+//   id: 1, 
+//   name: '', 
+//   retire: (date: Date) => {
+//     console.log(date)
+//   }};
+// employee.name = 'Neale'
+
+// Advanced types
