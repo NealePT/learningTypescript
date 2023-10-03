@@ -53,3 +53,68 @@
 // employee.name = 'Neale'
 
 // Advanced types
+// Type Aliases: you can create a type and use it later 
+// type Employee = {
+//   readonly id: number,
+//   name: string,
+//   retire: (date: Date) => void
+// }
+// let employee: Employee = {
+//   id: 1, 
+//   name: '', 
+//   retire: (date: Date) => {
+//     console.log(date)
+//   }
+// }
+
+// Union Types: can declare multiple types for one variable
+// function kgToLbs(weight: number | string): number {
+//   // Narrowing- narrowing down type 
+//   if (typeof weight === 'number') {
+//     return weight * 2.2;
+//   } else {
+//     return parseInt(weight) * 2.2;
+//   }
+// }
+
+// kgToLbs(10);
+// kgToLbs('10kg');
+
+// Intersection Types- using '&' you can create something that has multiple types
+// type Draggable = {
+//   drag: () => void
+// };
+
+// type Resizable = {
+//   resize: () => void
+// };
+
+// type UIWidget = Draggable & Resizable
+// let textBox: UIWidget = {
+//   drag: () => {},
+//   resize: () => {}
+// }
+
+// // Literal Types- allows you to limit values that a variable can be
+// type Quantity = 50 | 100;
+// let quantity: Quantity = 50;
+
+// // Nullable Types- 
+// function greet(name: string | null | undefined) {
+//   if (name)
+//     console.log(name.toUpperCase());
+//   else 
+//     console.log('Hi');
+// }
+
+type Customer = {
+  birthday: Date
+};
+
+function getCustomer(id: number): Customer | null | undefined {
+  return id === 0 ? null : {birthday: new Date()};
+}
+let customer = getCustomer(0)
+// if (customer !== null && customer !== undefined)
+// Using optional property access operator: adds a ? so that it will only print if the customer has a birthday 
+  console.log(customer?.birthday)
