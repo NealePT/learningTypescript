@@ -3,11 +3,12 @@ import React from "react";
 interface Props {
   todo:string;
   setTodo:React.Dispatch<React.SetStateAction<string>>
+  handleAdd:(e: React.FormEvent) => void;
 }
 
-export default function InputField({todo, setTodo}:Props) {
+export default function InputField({todo, setTodo, handleAdd}:Props) {
   return (
-    <form className="input">
+    <form className="input" onSubmit={handleAdd}>
       <input 
         value={todo} 
         onChange={
@@ -17,7 +18,9 @@ export default function InputField({todo, setTodo}:Props) {
         placeholder="Enter a task" 
         className="input__box"
       />
-      <button className="input__submit" type="submit">Go</button>
+      <button className="input__submit" type="submit" onSubmit={handleAdd}>
+        Go
+      </button>
     </form>
   )
 }
