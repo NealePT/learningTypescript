@@ -8,7 +8,15 @@ interface Props {
 export default function InputField({todo, setTodo}:Props) {
   return (
     <form className="input">
-      <input type="input" placeholder="Enter a task" className="input__box"/>
+      <input 
+        value={todo} 
+        onChange={
+          (e) => setTodo(e.target.value)
+        } 
+        type="input" 
+        placeholder="Enter a task" 
+        className="input__box"
+      />
       <button className="input__submit" type="submit">Go</button>
     </form>
   )
