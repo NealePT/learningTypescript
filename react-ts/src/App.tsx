@@ -1,4 +1,5 @@
 import './App.css';
+import './components/styles.css'
 import InputField from './components/InputField';
 
 
