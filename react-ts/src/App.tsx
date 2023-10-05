@@ -1,27 +1,28 @@
 import './App.css';
 
-let name: string
-let age: number;
+let name: string;
+let age: number | string;
 let isStudent: boolean;
 let hobbies: string[];
 let role:[number, string];
+let printName: (name:string) => void;
 
-type Person = {
-  name:string,
-  age:number,
-}
+// type Person = {
+//   name:string,
+//   age?:number,
+// }
 
-let person: Person = {
-  name: "Neale",
-  age: 26
-}
+// let person: Person = {
+//   name: "Neale",
+// }
+
+// let lostOfPeople: Person[];
 
 function App() {
 
   return (
     <div className="App">
       Hello World
-      {person.name}
     </div>
   );
 }
