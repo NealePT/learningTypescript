@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function InputField() {
+interface Props {
+  todo:string;
+  setTodo:React.Dispatch<React.SetStateAction<string>>
+}
+
+export default function InputField({todo, setTodo}:Props) {
   return (
     <form className="input">
       <input type="input" placeholder="Enter a task" className="input__box"/>
