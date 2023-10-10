@@ -3,6 +3,7 @@ import './components/styles.css'
 import InputField from './components/InputField';
 import { useState } from 'react';
 import { Todo } from './model';
+import TodoList from './components/ToDoList';
 
 const App: React.FC = () => {
 
