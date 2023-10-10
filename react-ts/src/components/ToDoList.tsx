@@ -1,7 +1,14 @@
-export default function TodoList() {
-  return (
-    <div className="TodoList">
+import React from "react";
+import { Todo } from "../model";
+import "./styles.css";
 
-    </div>
-  )
+interface Props{
+  todos: Todo[];
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+}
+
+const TodoList: React.FC = ({todos, setTodos}:Props) => {
+  return <div className="todos">{}</div>
 };
+
+export default TodoList
